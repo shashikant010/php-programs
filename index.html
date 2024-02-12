@@ -1,28 +1,3 @@
-<?php
-$server="localhost";
-$user="root";
-$password="";
-$con=mysqli_connect($server,$user,$password);
-// if(!$con){
-//     die("connection to this database failed due to ".mysqli_connect_error());
-// }
-$name=mysqli_real_escape_string($con,$_POST['name']);
-$age=mysqli_real_escape_string($con,$_POST['age']);
-$gender=mysqli_real_escape_string($con,$_POST['gender']);
-$email=mysqli_real_escape_string($con,$_POST['email']);
-$phone=mysqli_real_escape_string($con,$_POST['phone']);
-$other=mysqli_real_escape_string($con,$_POST['desc']);
-$sql="INSERT INTO `trip`.`trip`(`name`, `age`, `gender`, `email`, `phone`, `other`) VALUES ($name,$age,$gender,$email,$phone,$other,current_timestamp())";
-echo $sql;
-if($con->query($sql)==true){
-    echo "successfull submitted";
-}
-else{
-    echo "error : $sql".$con->error;
-}
-$con->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +28,6 @@ $con->close();
         </form>
     </div>
     <script src="index.js"></script>
-    <!-- INSERT INTO `trip`(`sno`, `name`, `age`, `gender`, `email`, `phone`, `other`, `date`) VALUES ('[value-1])','[value-2])','[value-3])','[value-4])','[value-5])','[value-6])','[value-7])','[value-8])') -->
+    <!-- INSERT INTO `trip`(`sno`, `name`, `age`, `gender`, `email`, `phone`, `other`, `date`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]') -->
 </body>
 </html>x
