@@ -14,6 +14,7 @@
 <body>
     hello this is php website
     <?php
+    define('pi',3.14);
     echo "hello this is written in php <br>";
     echo "<h1>this is a heading</h1>";
     $variable1 = 7;
@@ -24,6 +25,17 @@
     echo "$variable1*$variable2=",$variable1*$variable2,"<br>";
     echo "$variable1/$variable2=",$variable1/$variable2,"<br>";
     
+    $one = "sky";
+    $two =66;
+    // $three=[1,2,3,4];
+    echo var_dump($one);
+    echo '<br>';
+    echo var_dump($two);
+    echo '<br>';
+
+    // echo var_dumb($two);
+    echo '<br>';
+    echo pi;
     ?>
 </body>
 </html>
